@@ -70,17 +70,17 @@ void loop() {
 
   // add your code here!
 
-  if(dist_raw < 180) {
+  if(dist_ema < 180) {
     digitalWrite(PIN_LED,HIGH);
     myservo.writeMicroseconds(_DUTY_MIN);
   }
-  else if(dist_raw > 360) {
+  else if(dist_ema > 360) {
     digitalWrite(PIN_LED,HIGH);
     myservo.writeMicroseconds(_DUTY_MAX);
   }
   else{
     digitalWrite(PIN_LED,LOW);
-    myservo.writeMicroseconds((float)(10.2*dist_ema-1293));
+    myservo.writeMicroseconds((float)(10.2*dist_ema-1291));
   }
 
    
