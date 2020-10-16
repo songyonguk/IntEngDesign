@@ -80,7 +80,7 @@ void loop() {
   }
   else{
     digitalWrite(PIN_LED,LOW);
-    myservo.writeMicroseconds((float)(10.2*dist_ema-1291));
+    myservo.writeMicroseconds((float)(10.25*dist_ema-1291));
   }
 
    
